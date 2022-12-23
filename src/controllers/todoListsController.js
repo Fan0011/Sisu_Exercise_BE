@@ -84,7 +84,7 @@ export default class TodoListsController {
   }
 
   getList = async(req, res, next) => {
-    const user_id = req.params.user_id;
+    const user_id = req.body.user_id;
     if( user_id===undefined ){
         return res.json({success:false, message:null, data:"Confirm your inputs"});
     }
@@ -104,7 +104,7 @@ export default class TodoListsController {
   }
 
   getTitle = async(req, res, next) => {
-    const id = req.params.id;
+    const id = req.body.id;
     if( id===undefined ){
         return res.json({success:false, message:null, data:"Confirm your inputs"});
     }

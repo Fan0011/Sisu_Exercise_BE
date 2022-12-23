@@ -13,7 +13,7 @@ class TasksRouter {
         this.router.route("/addtask").post(this.controller.addTask);
         this.router.route("/updatetask").post(this.controller.updateTask);
         this.router.route("/deletetask").post(this.controller.deleteTask);
-        this.router.route("/gettask/:list_id").get(this.controller.getTask);
+        this.router.route("/gettask").post(this.controller.getTask);
     }
 }
 

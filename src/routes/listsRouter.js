@@ -13,8 +13,8 @@ class ListsRouter {
         this.router.route("/addlist").post(this.controller.addList);
         this.router.route("/updatelist").post(this.controller.updateList);
         this.router.route("/deletelist").post(this.controller.deleteList);
-        this.router.route("/getlist/:user_id").get(this.controller.getList);
-        this.router.route("/gettitle/:id").get(this.controller.getTitle);
+        this.router.route("/getlist").post(this.controller.getList);
+        this.router.route("/gettitle").post(this.controller.getTitle);
     }
 }
 

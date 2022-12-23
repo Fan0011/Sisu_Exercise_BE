@@ -80,7 +80,7 @@ export default class TaskItemsController {
   }
 
   getTask = async(req, res, next) => {
-    const list_id = req.params.list_id;
+    const list_id = req.body.list_id;
     if( list_id===undefined ){
         return res.json({success:false, message:null, data:"Confirm your inputs"});
     }
